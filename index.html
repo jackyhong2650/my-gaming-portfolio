@@ -4,73 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>个人游戏成果展示</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
         header {
-            background-color: #333;
+            background-color: #007bff;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
         }
         nav a {
             color: #fff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            background-color: #555;
+            background-color: #0056b3;
         }
         .container {
-            padding: 20px;
+            padding: 40px 0;
         }
-        h1, h2 {
-            text-align: center;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
         .gallery img {
             width: 100%;
-            max-width: 300px;
-            margin: 10px;
-            display: inline-block;
+            transition: transform 0.3s ease;
         }
-        .video {
-            text-align: center;
-            padding: 20px;
+        .gallery img:hover {
+            transform: scale(1.05);
         }
         .video iframe {
-            width: 80%;
-            height: 400px;
-            max-width: 800px;
-        }
-        .download {
-            text-align: center;
-            margin: 20px 0;
+            width: 100%;
+            height: 500px;
         }
         .download a {
-            background-color: #333;
+            background-color: #343a40;
             color: #fff;
             padding: 10px 20px;
-            text-decoration: none;
             border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
         .download a:hover {
-            background-color: #555;
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
+            background-color: #007bff;
         }
         form input, form textarea {
             width: 100%;
@@ -80,21 +64,22 @@
             border-radius: 5px;
         }
         form input[type="submit"] {
-            background-color: #333;
+            background-color: #007bff;
             color: #fff;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         form input[type="submit"]:hover {
-            background-color: #555;
-        }
-        .social {
-            text-align: center;
-            margin: 20px 0;
+            background-color: #0056b3;
         }
         .social a {
             margin: 0 10px;
-            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+        .social a:hover {
+            color: #0056b3;
         }
     </style>
 </head>
@@ -102,12 +87,19 @@
     <header>
         <h1>个人游戏成果展示</h1>
     </header>
-    <nav>
-        <a href="#achievements">游戏成就</a>
-        <a href="#gallery">图片画廊</a>
-        <a href="#video">视频</a>
-        <a href="#download">下载</a>
-        <a href="#contact">联系</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">主页</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#achievements">游戏成就</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">图片画廊</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">视频</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#download">下载</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">联系</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div class="container">
         <section id="achievements">
@@ -116,15 +108,15 @@
         </section>
         <section id="gallery" class="gallery">
             <h2>图片画廊</h2>
-            <img src="20240421020502.png" alt="成就图片1">
+            <img src="20240614015514.png" alt="成就图片1">
             <img src="20240607020244.png" alt="成就图片2">
-            <img src="20240614015514.png" alt="成就图片3">
+            <img src="20240421020502.png" alt="成就图片3">
         </section>
         <section id="video" class="video">
             <h2>视频</h2>
-            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=889439365&bvid=BV1gP4y1t7DP&cid=377827936&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=889439365&bvid=BV1gP4y1t7DP&cid=377827936&p=1" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </section>
-        <section id="download" class="download">
+        <section id="download" class="download text-center">
             <h2>下载</h2>
             <a href="截屏.zip" download>点击下载游戏成果文件</a>
         </section>
@@ -137,11 +129,11 @@
                 <input type="submit" value="发送">
             </form>
         </section>
-        <section class="social">
+        <section class="social text-center">
             <h2>社交媒体</h2>
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
         </section>
     </div>
 </body>
