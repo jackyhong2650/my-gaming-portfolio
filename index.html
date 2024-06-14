@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人游戏成果展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .video {
+            text-align: center;
+        }
+        .video iframe {
+            width: 80%;
+            height: 400px;
+            max-width: 800px;
+        }
+        .download {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .download a {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download a:hover {
+            background-color: #555;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .social {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人游戏成果展示</h1>
+    </header>
+    <nav>
+        <a href="#achievements">游戏成就</a>
+        <a href="#gallery">图片画廊</a>
+        <a href="#video">视频</a>
+        <a href="#download">下载</a>
+        <a href="#contact">联系</a>
+    </nav>
+    <div class="container">
+        <section id="achievements">
+            <h2>游戏成就</h2>
+            <p>在这里详细描述你的游戏成就。</p>
+        </section>
+        <section id="gallery" class="gallery">
+            <h2>图片画廊</h2>
+            <img src="20240421020502.png" alt="成就图片1">
+            <img src="20240607020244.png" alt="成就图片2">
+            <img src="20240614015514.png" alt="成就图片3">
+        </section>
+        <section id="video" class="video">
+            <h2>视频</h2>
+            <iframe src="https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/36/79/377827936/377827936-1-16.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1718395196&gen=playurlv2&os=cosbv&oi=974325092&trid=31b8c0565d4a44ec878941fb8a3eb3fcT&mid=88081057&platform=html5&og=cos&upsig=c7df33e2f695e96daa4de08f08b8a446&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform,og&bvc=vod&nettype=0&bw=52707&orderid=0,1&buvid=&build=0&mobi_app=&f=T_0_0&logo=80000000" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section id="download" class="download">
+            <h2>下载</h2>
+            <a href="截屏.zip" download>点击下载游戏成果文件</a>
+        </section>
+        <section id="contact">
+            <h2>联系我</h2>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="姓名" required>
+                <input type="email" name="email" placeholder="电子邮件" required>
+                <textarea name="message" rows="5" placeholder="留言" required></textarea>
+                <input type="submit" value="发送">
+            </form>
+        </section>
+        <section class="social">
+            <h2>社交媒体</h2>
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+        </section>
+    </div>
+</body>
+</html>
